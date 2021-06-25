@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">સોલાર કેલ્ક્યુલેટર</string>
+    <string name="Appliances">ઉપકરણો</string>
+    <string name="Daily_Usages">દૈનિક વપરાશ</string>
+    <string name="Quantity">જથ્થો</string>
+    <string name="Dont_Know">ખબર નથી</string>
+    <string name="Total_Cost">કુલ ખર્ચ</string>
+    <string name="Battery">બટરી</string>
+    <string name="Inverter_Size">" ઇન્વર્ટર કદ"</string>
+    <string name="Number_Of_Panels">" પેનલ્સની સંખ્યા"</string>
+    <string name="Daily_Consumption">દૈનિક વપરાશ</string>
+    <string name="Specifcation">સ્પષ્ટીકરણ</string>
+    <string name="hr_day">કલાક / દિવસ</string>
+    <string name="greater">" વધારે"</string>
+    <string name="watts_or">" વtsટ્સ અથવા"</string>
+    <string name="panels">" પેનલ્સ"</string>
+    <string name="for_3day_autonomy">" 3 દિવસ સ્વાયતતા માટે"</string>
+    <string name="volt_solar_inverters">" વોલ્ટ સોલર ઇન્વર્ટર"</string>
+    <string name="watts">" વોટ"</string>
+    <string name="volts">" વોલ્ટ"</string>
+    <string name="watt_solar_panels">" વોટ સોલર પેનલ્સ"</string>
+    <string name="Reset">ફરીથી સેટ કરો</string>
+    <string name="Demo_Values">" ડેમો મૂલ્યો"</string>
+    <string name="Change_Language">" ભાષા બદલો"</string>
+    <string name="Enter_all_the_inputs">બધા ઇનપુટ્સ દાખલ કરો</string>
+</resources>

@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Reset"
+    <item android:title="@string/Reset"
         android:id="@+id/reset"/>
-    <item android:title="Demo Values"
+    <item android:title="@string/Demo_Values"
         android:id="@+id/demo"/>
+    <item android:title="@string/Change_Language" >
+        <menu >
+            <item android:title="
+हिंदी"
+                android:id="@+id/hin"/>
+            <item android:title="ગુજરાતી"
+                android:id="@+id/guj"/>
+            <item android:title="English"
+                android:id="@+id/eng"/>
+        </menu>
+    </item>
 </menu>

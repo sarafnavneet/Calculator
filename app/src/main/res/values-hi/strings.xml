@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">सौर कैलकुलेटर</string>
+    <string name="Appliances">उपकरण</string>
+    <string name="Daily_Usages">दैनिक उपयोग</string>
+    <string name="Quantity">मात्रा</string>
+    <string name="Dont_Know">पता नहीं</string>
+    <string name="Daily_Consumption">दैनिक खपत</string>
+    <string name="Number_Of_Panels">पैनलों की संख्या</string>
+    <string name="Inverter_Size">इन्वर्टर आकार</string>
+    <string name="Battery">" बैटरी"</string>
+    <string name="Total_Cost">" कुल लागत"</string>
+    <string name="Specifcation">विनिर्देश</string>
+    <string name="watt_solar_panels">वाट सौर पैनल</string>
+    <string name="volts">" वोल्ट"</string>
+    <string name="watts">" वाट"</string>
+    <string name="volt_solar_inverters">" वोल्ट सौर इनवर्टर"</string>
+    <string name="for_3day_autonomy">" 3 दिन की स्वायत्तता के लिए"</string>
+    <string name="panels">" पैनलों"</string>
+    <string name="watts_or">" वाट्स or"</string>
+    <string name="greater">" ग्रेटर"</string>
+    <string name="hr_day">" घंटा/दिन "</string>
+    <string name="Change_Language">" भाषा बदलें"</string>
+    <string name="Reset">रीसेट</string>
+    <string name="Demo_Values">डेमो मान</string>
+    <string name="Enter_all_the_inputs">" सभी इनपुट दर्ज करें"</string>
+</resources>

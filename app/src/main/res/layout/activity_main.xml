@@ -95,7 +95,7 @@
                 android:id="@+id/c1"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Don't Know" />
+                android:text="@string/Dont_Know" />
 
             <EditText
                 android:id="@+id/a2"
@@ -112,7 +112,7 @@
                 android:id="@+id/c2"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Don't Know" />
+                android:text="@string/Dont_Know" />
 
             <EditText
                 android:id="@+id/a3"
@@ -129,7 +129,7 @@
                 android:id="@+id/c3"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Don't Know" />
+                android:text="@string/Dont_Know" />
 
             <EditText
                 android:id="@+id/a4"
@@ -146,7 +146,7 @@
                 android:id="@+id/c4"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Don't Know" />
+                android:text="@string/Dont_Know" />
 
             <EditText
                 android:id="@+id/a5"
@@ -163,7 +163,7 @@
                 android:id="@+id/c5"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Don't Know" />
+                android:text="@string/Dont_Know" />
 
             <EditText
                 android:id="@+id/a6"
@@ -180,7 +180,7 @@
                 android:id="@+id/c6"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Don't Know" />
+                android:text="@string/Dont_Know" />
 
         </LinearLayout>
 
@@ -290,7 +290,7 @@
             android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="Appliances"
+            android:text="@string/Appliances"
             android:textAlignment="center"
             android:textStyle="bold" />
 
@@ -301,7 +301,7 @@
             android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="Daily Usages"
+            android:text="@string/Daily_Usages"
             android:textAlignment="center"
             android:textStyle="bold" />
 
@@ -313,7 +313,7 @@
             android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="Quantity"
+            android:text="@string/Quantity"
             android:textAlignment="center"
             android:textStyle="bold" />
     </LinearLayout>
@@ -338,20 +338,17 @@
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/solar2" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button"
-            android:layout_width="80dp"
+            android:layout_width="65dp"
             android:layout_height="80dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/custombutton"
-            android:fadingEdge="horizontal|vertical"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
+            android:background="@drawable/sunr"
             android:onClick="onClick"
-            android:text="Submit"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="#FF9800"
-            app:cornerRadius="40dp" />
+            android:scaleType="centerCrop"
+            tools:ignore="UsingOnClickInXml" />
+
+
     </RelativeLayout>
 
 

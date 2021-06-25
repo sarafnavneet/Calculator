@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">SolarCalculator</string>
+    <string name="Appliances">Appliances</string>
+    <string name="Daily_Usages">Daily Usages</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Dont_Know">Don\'t Know</string>
+
+    <string name="Daily_Consumption">Daily Consumption</string>
+    <string name="Number_Of_Panels">Number Of Panels</string>
+    <string name="Inverter_Size">Inverter Size</string>
+    <string name="Battery">Battery</string>
+    <string name="Total_Cost">Total Cost</string>
+    <string name="Specifcation">Specification</string>
+    <string name="watt_solar_panels">watt solar panels</string>
+    <string name="volts">volts</string>
+    <string name="watts">watts</string>
+    <string name="volt_solar_inverters">volt solar inverters</string>
+    <string name="for_3day_autonomy">for 3day autonomy</string>
+    <string name="hr_day">hr/day</string>
+    <string name="panels">panels</string>
+    <string name="watts_or">watts or</string>
+    <string name="greater">greater</string>
+    <string name="Reset">Reset</string>
+    <string name="Demo_Values">Demo Values</string>
+    <string name="Change_Language">Change Language</string>
+    <string name="Enter_all_the_inputs">Enter all the inputs</string>
+
+
 </resources>

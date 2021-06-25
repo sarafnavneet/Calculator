@@ -2,9 +2,14 @@ package com.example.solarcalculator;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -15,11 +20,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import static android.graphics.Color.RED;
 
@@ -46,13 +53,31 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox c5;
     private CheckBox c6;
 
+
     private List<EditText> usageList;
     private List<CheckBox> checkBoxes;
     private List<EditText> quantity;
+    private ImageButton imageButton;
+    private ImageButton imageButton2;
+    private ImageButton imageButton3;
+
+    public static String lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLoacale();
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.app_name));
+
+
+        imageButton = findViewById(R.id.button);
+        if(lang.equals("hi"))
+            imageButton.setBackgroundResource(R.drawable.sung);
+        else if(lang.equals("gu")){
+            imageButton.setBackgroundResource(R.drawable.sunguj);
+        }
 
         usageList = new ArrayList<>();
         usageList.add( a1 = findViewById(R.id.a1));
@@ -96,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void onClick(View view){
         if(empty()){
-            Toast.makeText(this, "Enter all the inputs", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.Enter_all_the_inputs), Toast.LENGTH_SHORT).show();
         }
         else {
             double va1 = Double.parseDouble(a1.getText().toString());
@@ -117,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
             double inverterSize = 1.3 * ((10 * vb1) + (36 * vb2) + (70 * vb3) + (62 * vb4) + (125 * vb5) + (45.6 * vb6));
 
-            double battery = (0.66 * 3 * ((10 * va1 * vb1) + (36 * va2 * vb2) + (70 * va3 * vb3) + (62 * va4 * vb4) + (125 * va5 * vb5) + (45.6 * va6 * vb6))) / (12 * 0.85 * 0.6);
+            double battery = (3 * ((10 * va1 * vb1) + (36 * va2 * vb2) + (70 * va3 * vb3) + (62 * va4 * vb4) + (125 * va5 * vb5) + (45.6 * va6 * vb6))) / (12 * 0.85 * 0.6);
 
             double cost = 80 * 1.2 * (10 * vb1 + 36 * vb2 + 70 * vb3 + 62 * vb4 + 125 * vb5 + 45.6 * vb6);
 
@@ -131,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
             nextActivity.putExtra("Battery", df.format(battery) + "");
             nextActivity.putExtra("Cost", df.format(cost) + "");
             nextActivity.putExtra("Daily Consumption", df.format(dailyConsumption)+"");
+
             startActivity(nextActivity);
 
         }
@@ -168,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     public boolean onOptionsItemSelected( MenuItem item) {
         switch (item.getItemId()) {
@@ -195,8 +222,47 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
+            break;
+            case R.id.hin: {
+                setLocale("hi");
+                recreate();
+
+
+            }
+            break;
+            case R.id.eng: {
+
+                setLocale("");
+                recreate();
+            }
+            break;
+            case R.id.guj:{
+                setLocale("gu");
+                recreate();
+            }
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setLocale(String lang){
+        this.lang = lang;
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config  = new Configuration();
+        config.locale=locale;
+        getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+
+
+        SharedPreferences.Editor editor = getSharedPreferences("Settings",MODE_PRIVATE).edit();
+        editor.putString("My lang",lang);
+        editor.apply();
+    }
+
+
+    public void loadLoacale(){
+        SharedPreferences preferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        String language = preferences.getString("My lang","");
+        setLocale(language);
     }
 }
